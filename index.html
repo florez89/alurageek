@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="*">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Alura Geek</title>
+    <link rel="shortcut icon" href="./img/Rueda (48 x 48 px).png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="encabezado">
+        <img src="img/logo-150x150.png" class="logo-encabezado" alt="logo"/>
+        <h1 class="titulo-encabezado">Autos<font style="color: #f19611;"> Geek</font> </h1>
+    </header>
+    <main class="contenedor-principal">
+        <section class="catalogo-productos">
+            <h1 class="titulo-productos">Mis Productos:</h1>
+            <div data-producto class="productos-contenedor">
+                <div class="card">
+                    <figure>
+                        <img class="img-contenedor" src="./img/car-monster-azul.webp" alt="hot-wheel-monster-azul">
+                    <figcaption class="card-contenedor--info">Carro Monster Azul</figcaption>
+                    </figure>
+                    <div class="card-contenedor--precio">
+                        <p>$20</p>
+                        <button class="boton-eliminar" id-data="${id}">
+                            <img src="./img/trash-2.svg" alt="img-eliminar" class="img-trash">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Agregar Producto:</h1>  
+            <form class="form-contenedor" data-form>
+                <input data-nombre placeholder="Nombre del producto" type="text">
+                <input data-precio placeholder="Precios del producto" type="text">
+                <input data-imagen placeholder="Imágen del producto" type="text">
+
+                <div class="boton-contenedor">
+                    <button type="submit" class="boton-submit" id="boton"> Enviar!</button>
+                    <button type="reset" class="boton-limpiar" id="boton">Limpiar</button>
+                </div>
+            </form>      
+        </section>
+    </main>
+    <footer class="contedor-footer">
+        
+    </footer>
+</body>
+
+</html>
