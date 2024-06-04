@@ -2,14 +2,14 @@ import { servicesProducts } from "../services/products-services.js";
 
 const productosContenedor = document.querySelector("[data-producto]");
 
-function createCard (name, price, image, id) {
+function createCard (name, price, imagen, id) {
     const card = document.createElement("div");
-    card.classList.add("card");
+    //card.classList.add("card"); (esta línea coloca doble mi clase)
 
     card.innerHTML= `
     <div class="card">
         <figure>
-            <img class="img-contenedor" src="${image}" alt="${name}">
+            <img class="img-contenedor" src="${imagen}" alt="${name}">
         <figcaption class="card-contenedor--info">${name}</figcaption>
         </figure>
         <div class="card-contenedor--precio">
@@ -36,7 +36,7 @@ const render = async () => {
                 createCard(
                     product.name,
                     product.price,
-                    product.image,
+                    product.imagen,
                     product.id
                 )
             )
