@@ -36,22 +36,31 @@
                 </div>
             </div>
         </section>
-        <section>
-            <h1>Agregar Producto:</h1>  
-            <form class="form-contenedor" data-form>
-                <input data-nombre placeholder="Nombre del producto" type="text">
-                <input data-precio placeholder="Precios del producto" type="text">
-                <input data-imagen placeholder="Imágen del producto" type="text">
-
-                <div class="boton-contenedor">
-                    <button type="submit" class="boton-submit" id="boton"> Enviar!</button>
-                    <button type="reset" class="boton-limpiar" id="boton">Limpiar</button>
-                </div>
-            </form>      
+        <section class="contenedorDelFormulario">
+            <h1 class="titulo-formulario">Agregar Producto:</h1>
+            <div data-form class="formulario">
+                <form class="formulario-productos" data-form>
+                    <input data-nombre placeholder="   Nombre del producto" type="text" required>
+                    <input data-precio placeholder="   Precios del producto" type="text" required>
+                    <input data-imagen placeholder="   Imágen del producto" type="text" required>
+        
+                    <div class="boton-contenedor">
+                        <button type="submit" class="boton-submit" id="boton"> Enviar!</button>
+                        <button type="reset" class="boton-limpiar" id="boton">Limpiar</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
     <footer class="contedor-footer">
-        
+        <div class="footer-img">
+            <img src="img/Rueda (48 x 48 px).png" alt="logo-pie-de-pagina" />
+            <h2>Autos Geek</h2>
+        </div>
+        <div class="texto-footer">
+            <p>Desarrollado por <a href="https://www.linkedin.com/in/gustavo-florez/" target="_blank">Gustavo Florez</a></p>
+            <p>Alura Latam - 2024</p>
+        </div>
     </footer>
 </body>
 

@@ -115,5 +115,110 @@ header{
     margin: 0 0 0 -1.3px;  
 }
 
+.contenedorDelFormulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
 
+}
+
+.titulo-formulario{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.formulario-productos{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 20px 5px 5px 5px;
+    gap: 20px;
+}
+
+input{
+    border: solid 3px;
+    border-radius: 15px;
+    border-color: #f19611;
+    height: 30px;
+}
+
+.boton-contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+
+.boton-submit{
+    width: 70px;
+    height: 30px;
+    background-color: #000000;
+    border: solid 3px;
+    border-color: #f19611;
+    border-radius: 5px;
+    padding: 5px 0px;
+    font-weight: bold;
+    color: white
+}
+
+.boton-submit:hover{
+    border-color: #000000;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bolder;
+    transform: scale(1.1);
+}
+
+.boton-limpiar{
+    width: 70px;
+    height: 30px;
+    border: solid 3px;
+    background-color: #ffffff;
+    border-color: #000000;
+    border-radius: 5px;
+    padding: 5px 0px;
+    font-weight: bold;
+}
+
+.boton-limpiar:hover{
+    background-color: #f19611;
+    border-color: #000000;
+    color: #ffffff;
+    font-weight: bolder;
+    transform: scale(1.1);
+}
+
+.contedor-footer{
+    background: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    border-top: solid 5px;
+    border-color: #f19611;    
+}
+
+.footer-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.texto-footer{
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+/*Mobile*/
+@media (max-width: 768px) {
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 10px;
+    }
+
+    .boton-contenedor{
+        padding-bottom: 20px;
+    }
+
+}
 
