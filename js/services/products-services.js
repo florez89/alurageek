@@ -21,7 +21,19 @@ const crearProductos =(name, price, imagen) => {
     .catch((err) => console.log(err));
 };
 
+
+const borrarProducto = (id) => {
+    return fetch(`http://localhost:3000/productos/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .catch((err) => console.log(err));
+  };
+
+
+
 export const servicesProducts = {
     productList,
     crearProductos,
+    borrarProducto,
 };

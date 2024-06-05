@@ -21,7 +21,17 @@ function createCard (name, price, imagen, id) {
         </div>
     </div>  
 
-    `;
+    `;   
+
+    const botonBorrar = card.querySelector("[data-eliminar]");
+    botonBorrar.addEventListener("click", async () => {
+      try {
+        await servicesProducts.borrarProducto(id);
+        card.remove();
+      } catch (error) {
+        console.error("Error al borrar el producto:", error);
+      }
+    });
 
     productosContenedor.appendChild(card);
     return card;
@@ -60,15 +70,7 @@ formulario.addEventListener("submit", ()=> {
     console.log(imagen)  */
 
     servicesProducts.crearProductos(nombre, precio, imagen).then((res) => console.log(res)).catch((err) => console.log(err))
-
-    limpiarForm();
+ 
 });
 
 render();
-
-const limpiarForm = () => {
-    document.querySelector("[data-titulo]").value = "";
-    document.querySelector("[data-precio]").value = "";
-    document.querySelector("[data-imagen]").value = "";
-  };
-  
