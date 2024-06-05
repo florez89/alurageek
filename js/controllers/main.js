@@ -42,23 +42,23 @@ const render = async () => {
         const listProducts = await servicesProducts.productList();
         // console.log(listProducts);
         
-        listProducts.forEach(product => {
-            productosContenedor.appendChild(
+        listProducts.forEach((product) => {
+    
                 createCard(
                     product.name,
                     product.price,
                     product.imagen,
                     product.id
-                )
-            )
+                );
+        
         });
 
     } catch (error) {
-        console.log(error)
+        console.error("Error al cargar los productos:", error);
     }
 };
 
-formulario.addEventListener("submit", ()=> {
+formulario.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const nombre = document.querySelector("[data-nombre]").value;
@@ -69,8 +69,32 @@ formulario.addEventListener("submit", ()=> {
     console.log(precio)
     console.log(imagen)  */
 
-    servicesProducts.crearProductos(nombre, precio, imagen).then((res) => console.log(res)).catch((err) => console.log(err))
- 
-});
+    try {
+        const nuevoProducto = await servicesProducts.crearProductos(
+          nombre,
+          precio,
+          imagen
+        );
+
+        createCard(
+            nuevoProducto.name,
+            nuevoProducto.price,
+            nuevoProducto.imagen,
+            nuevoProducto.id
+          );
+        } catch (error) {
+            console.error("Error al crear el producto:", error);
+          }
+        
+          
+          limpiarForm();
+        });
+    
 
 render();
+
+const limpiarForm = () => {
+    document.querySelector("[data-nombre]").value = "";
+    document.querySelector("[data-precio]").value = "";
+    document.querySelector("[data-imagen]").value = "";
+  };
