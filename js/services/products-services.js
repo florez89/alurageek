@@ -1,12 +1,12 @@
 const productList = () => {
-    return fetch("http://localhost:3000/productos")
+    return fetch("https://api-fake-geek-cars.vercel.app/productos")
         .then((res) => res.json())
         .catch((err) => console.log(err));
 };
 
 
 const crearProductos =(name, price, imagen) => {
-    return fetch ("http://localhost:3000/productos", {
+    return fetch ("https://api-fake-geek-cars.vercel.app/productos", {
         method: "POST",
         headers: {
             "content-type": "application/json",
@@ -23,7 +23,7 @@ const crearProductos =(name, price, imagen) => {
 
 
 const borrarProducto = (id) => {
-    return fetch(`http://localhost:3000/productos/${id}`, {
+    return fetch(`https://api-fake-geek-cars.vercel.app/productos/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

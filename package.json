@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "json-server --watch ./database/db.json --port 3000"
   },
   "keywords": [],
   "author": "",
@@ -11,8 +11,5 @@
   "description": "",
   "dependencies": {
     "express": "^4.19.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.3"
   }
 }
