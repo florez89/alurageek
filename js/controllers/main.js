@@ -1,6 +1,7 @@
 import { servicesProducts } from "../services/products-services.js";
 
 const productosContenedor = document.querySelector("[data-producto]");
+const formulario = document.querySelector("[data-form]");
 
 function createCard (name, price, imagen, id) {
     const card = document.createElement("div");
@@ -14,7 +15,7 @@ function createCard (name, price, imagen, id) {
         </figure>
         <div class="card-contenedor--precio">
             <p>$${price}</p>
-            <button class="boton-eliminar" id-data="${id}">
+            <button data-eliminar class="boton-eliminar" id-data="${id}">
                 <img src="./img/trash-2.svg" alt="img-eliminar" class="img-trash">
             </button>
         </div>
@@ -47,4 +48,27 @@ const render = async () => {
     }
 };
 
+formulario.addEventListener("submit", ()=> {
+    event.preventDefault();
+
+    const nombre = document.querySelector("[data-nombre]").value;
+    const precio = document.querySelector("[data-precio]").value;
+    const imagen = document.querySelector("[data-imagen]").value;
+
+   /*  console.log(nombre)
+    console.log(precio)
+    console.log(imagen)  */
+
+    servicesProducts.crearProductos(nombre, precio, imagen).then((res) => console.log(res)).catch((err) => console.log(err))
+
+    limpiarForm();
+});
+
 render();
+
+const limpiarForm = () => {
+    document.querySelector("[data-titulo]").value = "";
+    document.querySelector("[data-precio]").value = "";
+    document.querySelector("[data-imagen]").value = "";
+  };
+  

@@ -1,34 +1,40 @@
 {
-    "productos":[
-        {
-            "name": "Carro Monster Naranja",
-            "price": "20.00",
-            "imagen": "https://florez89.github.io/alurageek/img/car-monster-naranja.webp",
-            "id": 1
-        },
-        {
-            "name": "Carro Monster Azul",
-            "price": "25.00",
-            "imagen": "https://florez89.github.io/alurageek/img/car-monster-azul",
-            "id": 2
-        },
-        {
-            "name": "Carro Monster Rojo",
-            "price": "30.00",
-            "imagen": "https://florez89.github.io/alurageek/img/car-monster-red",
-            "id": 3
-        },
-        {
-            "name": "Carro Monster Negro",
-            "price": "35.00",
-            "imagen": "https://florez89.github.io/alurageek/img/car-monster-black",
-            "id": 4
-        },
-        {
-            "name": "Carro Monster Amarillo",
-            "price": "35.00",
-            "imagen": "https://florez89.github.io/alurageek/img/car-monster-yellow",
-            "id": 5
-        }
-    ]
+  "productos": [
+    {
+      "name": "Carro Monster Naranja",
+      "price": "20.00",
+      "imagen": "https://florez89.github.io/alurageek/img/car-monster-naranja.webp",
+      "id": 1
+    },
+    {
+      "name": "Carro Monster Azul",
+      "price": "25.00",
+      "imagen": "https://florez89.github.io/alurageek/img/car-monster-azul",
+      "id": 2
+    },
+    {
+      "name": "Carro Monster Rojo",
+      "price": "30.00",
+      "imagen": "https://florez89.github.io/alurageek/img/car-monster-red",
+      "id": 3
+    },
+    {
+      "name": "Carro Monster Negro",
+      "price": "35.00",
+      "imagen": "https://florez89.github.io/alurageek/img/car-monster-black",
+      "id": 4
+    },
+    {
+      "name": "Carro Monster Amarillo",
+      "price": "35.00",
+      "imagen": "https://florez89.github.io/alurageek/img/car-monster-yellow",
+      "id": 5
+    },
+    {
+      "id": "ba2a",
+      "name": "Carro Monster Púrpura",
+      "price": "45.00",
+      "imagen": "https://i.ebayimg.com/thumbs/images/g/4wMAAOSwAJJl-vqN/s-l640.jpg"
+    }
+  ]
 }
