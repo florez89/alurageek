@@ -1,12 +1,12 @@
 const productList = () => {
-    return fetch("https://api-fake-geek-cars.vercel.app/productos")
+    return fetch("https://666029155425580055b28af9.mockapi.io/productos")
         .then((res) => res.json())
         .catch((err) => console.log(err));
 };
 
 
 const crearProductos =(name, price, imagen) => {
-    return fetch ("https://api-fake-geek-cars.vercel.app/productos", {
+    return fetch ("https://666029155425580055b28af9.mockapi.io/productos", {
         method: "POST",
         headers: {
             "content-type": "application/json",
@@ -23,7 +23,7 @@ const crearProductos =(name, price, imagen) => {
 
 
 const borrarProducto = (id) => {
-    return fetch(`https://api-fake-geek-cars.vercel.app/productos/${id}`, {
+    return fetch(`https://666029155425580055b28af9.mockapi.io/productos/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
